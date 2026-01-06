@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    :root {
+      --primary: #47485b;
+      --secondary: #22d3ee;
+      --dark: #0f172a;
+      --light: #f8fafc;
+      --card: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", Arial, sans-serif;
+      background: var(--light);
+      color: var(--dark);
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 90px 20px;
+      text-align: center;
+    }
+
+    .hero img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 5px solid white;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 2.6rem;
+    }
+
+    .hero p {
+      opacity: 0.95;
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
+
+    /* SECTIONS */
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: var(--primary);
+    }
+
+    /* ABOUT */
+    .about {
+      max-width: 700px;
+      margin: auto;
+      text-align: center;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    /* SKILLS */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .skill {
+      background: #eef2ff;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      transition: transform 0.3s ease;
+    }
+
+    .skill:hover {
+      transform: scale(1.08);
+    }
+
+    /* PROJECTS */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background: var(--card);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .project-image {
+      height: 160px;
+      background: linear-gradient(135deg, #c7d2fe, #bae6fd);
+    }
+
+    .project-content {
+      padding: 22px;
+    }
+
+    .project-content h3 {
+      margin-top: 0;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 18px;
+      background: var(--primary);
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+
+    /* CONTACT */
+    .contact {
+      text-align: center;
+    }
+
+    .contact a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #64748b;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <img src="myphoto.jpg" alt="Profile Photo">
+    <h1>Hsu Myat Mon</h1>
+    <p>Student • Web Developer • Designer</p>
+  </div>
+
+  <!-- ABOUT -->
+  <section>
+    <h2>About Me</h2>
+    <p class="about">
+      I’m a student learning web development and design.
+      I enjoy creating clean, modern, and user-friendly websites
+      while improving my skills through real-world projects.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Responsive Design</div>
+      <div class="skill">Git & GitHub</div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section>
+    <h2>Projects</h2>
+    <div class="projects">
+        <div class="project-card">
+        <div class="project-image"></div>
+        <div class="project-content">
+          <h3>Portfolio Website</h3>
+          <p>Personal responsive portfolio design.</p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image"></div>
+        <div class="project-content">
+          <h3>Calculator App</h3>
+          <p>Simple calculator using JavaScript.</p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image"></div>
+        <div class="project-content">
+          <h3>Landing Page</h3>
+          <p>Modern landing page layout.</p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section>
+    <h2>Contact</h2>
+    <div class="contact">
+      <p>Email: yourname@email.com</p>
+      <p>
+        GitHub:
+        <a href="https://github.com/HsuMyatMon17" target="_blank">
+          github.com/your-username
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Your Name
+  </footer>
+
+</body>
+</html>
